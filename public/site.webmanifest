@@ -1,0 +1,12 @@
+{
+  "name": "ERA de IA",
+  "short_name": "ERA de IA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#111827",
+  "icons": [
+    { "src": "/images/apple-touch-icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/images/apple-touch-icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
