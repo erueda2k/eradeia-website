@@ -11,7 +11,7 @@ Capturado el 2026-11-23 de https://www.eradeia.com (WordPress 6.9.11, tema twent
 - **robots:** `max-image-preview:large`
 - **theme-color:** `#111827`
 - **apple-mobile-web-app-title:** ERA de IA
-- **Manifest:** `/site.webmanifest` (copia en `docs/legacy/site.webmanifest`; name "ERA de IA", background `#ffffff`, theme `#111827`)
+- **Manifest:** `/site.webmanifest` (ahora en `public/site.webmanifest`; name "ERA de IA", background `#ffffff`, theme `#111827`)
 - **Favicon:** `https://eradeia.com/wp-content/uploads/2025/12/transparentShield2-icon-32.png` (32x32)
 - **Apple touch icon:** `https://eradeia.com/wp-content/uploads/2025/12/transparentShield-icon-192.png`
 - **Manifest icons:** 192 y 512 (`transparentShield-icon-512.png`)

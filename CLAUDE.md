@@ -1,12 +1,22 @@
 # Era de IA — sitio web
 
-Sitio de marketing de Era de IA (consultoría de IA para PyMEs, Emilio Rueda), producción en www.eradeia.com. Reconstrucción estática del sitio WordPress anterior (una sola página).
+Sitio de marketing de Era de IA (consultoría de IA para PyMEs, Emilio Rueda), producción en https://eradeia.com/ (dominio canónico: apex, no www). Reconstrucción estática del sitio WordPress anterior.
 
 ## Stack
 
-- Vite + React 18 + TypeScript (strict) + Tailwind CSS 4 (`@tailwindcss/vite`)
+- Vite + React 18 + TypeScript (strict) + Tailwind CSS 4 (`@tailwindcss/vite`, configuración en CSS, sin `tailwind.config`)
 - ESLint (flat config)
 - Despliegue: Vercel. Sin backend, sin Supabase, sin base de datos.
+
+## Estructura
+
+- Sitio multipágina con Vite, sin router: cada página es un HTML de entrada declarado en `vite.config.ts` → `build.rollupOptions.input` (`index.html` = home, `conocer-mi-historia/index.html`). Página nueva = entrada nueva; si falta, da 404 en Vercel.
+- `src/main.tsx` / `src/App.tsx` — home. `src/historia-main.tsx` + `src/pages/historia/` — "Conocer mi historia".
+- `src/components/sections/` — secciones de la home (Hero, Servicios, Contacto, Footer, etc.); `src/components/ui/` — piezas reutilizables.
+- `Header` y `Footer` compartidos por ambas páginas.
+- `src/lib/links.ts` — única fuente de enlaces de contacto (Calendly, WhatsApp, LinkedIn, email) y de navegación.
+- Enlaces internos siempre relativos (`/`, `/#contacto`, `/conocer-mi-historia/`).
+- `public/` — imágenes (`public/images/`) y `site.webmanifest`.
 
 ## Comandos
 
